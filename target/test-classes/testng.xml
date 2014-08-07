@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Suite" verbose="1" preserve-order="true">
+<parameter name="projectPath" value="D:\backofficeextention\ibn\Atom"/> 
+	<test name="BeforeAppEx" preserve-order="true">
+		<classes>
+			<class name="com.gtech.suite.BeforeAppEx"/>
+		</classes>
+	</test>
+
+
+<test name="SignIN" preserve-order="true">
+
+<groups>
+			<dependencies>
+			<group name="signIn" 										depends-on="openBrowser" />
+			<group name="closeBrowser" 	depends-on="signIn" />
+		
+			</dependencies>
+			<run>
+				<include name="openBrowser" />
+				<include name="signIn" />
+				<include name="closeBrowser" />
+			</run>
+</groups>
+<classes>
+			<class name="com.gtech.miscellaneous.testcases.WebBrowser"/>
+		<methods>
+				<include name="GAME_openBrowser"/>
+				<include name="GAME_closeBrowser"/>
+				
+			</methods>
+	
+			<class name="com.gtech.administration.testcases.Login"/>
+		<methods>
+				<include name="GAME_SignIn" invocation-numbers="0"/>
+			</methods>
+		</classes>
+	</test>
+</suite>
+<!-- Suite -->

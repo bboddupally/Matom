@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="10533" started-at="2014-08-07T07:14:32Z" finished-at="2014-08-07T07:14:43Z">
+    <groups>
+      <group name="openBrowser">
+        <method signature="WebBrowser.GAME_openBrowser(java.util.LinkedHashMap)[pri:0, instance:com.gtech.miscellaneous.testcases.WebBrowser@7c29e357]" name="GAME_openBrowser" class="com.gtech.miscellaneous.testcases.WebBrowser"/>
+      </group> <!-- openBrowser -->
+      <group name="closeBrowser">
+        <method signature="WebBrowser.GAME_closeBrowser()[pri:0, instance:com.gtech.miscellaneous.testcases.WebBrowser@7c29e357]" name="GAME_closeBrowser" class="com.gtech.miscellaneous.testcases.WebBrowser"/>
+      </group> <!-- closeBrowser -->
+      <group name="signIn">
+        <method signature="Login.GAME_SignIn(java.util.LinkedHashMap)[pri:0, instance:com.gtech.administration.testcases.Login@7f70888e]" name="GAME_SignIn" class="com.gtech.administration.testcases.Login"/>
+      </group> <!-- signIn -->
+      <group name="smokeTest">
+        <method signature="Login.GAME_SignIn(java.util.LinkedHashMap)[pri:0, instance:com.gtech.administration.testcases.Login@7f70888e]" name="GAME_SignIn" class="com.gtech.administration.testcases.Login"/>
+      </group> <!-- smokeTest -->
+    </groups>
+    <test name="BeforeAppEx" duration-ms="3" started-at="2014-08-07T07:14:32Z" finished-at="2014-08-07T07:14:32Z">
+    </test> <!-- BeforeAppEx -->
+    <test name="SignIN" duration-ms="10516" started-at="2014-08-07T07:14:32Z" finished-at="2014-08-07T07:14:43Z">
+      <class name="com.gtech.administration.testcases.Login">
+        <test-method status="PASS" signature="GAME_SignIn(java.util.LinkedHashMap)[pri:0, instance:com.gtech.administration.testcases.Login@7f70888e]" name="GAME_SignIn" duration-ms="2" depends-on-groups="openBrowser" started-at="2014-08-07T12:44:42Z" data-provider="DataProvider4Iterations" finished-at="2014-08-07T12:44:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}, field={User ID*=admin, Password*=ocimum}}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GAME_SignIn -->
+      </class> <!-- com.gtech.administration.testcases.Login -->
+      <class name="com.gtech.suite.BeforeAppEx">
+        <test-method status="PASS" signature="beforeSuite(java.lang.String)[pri:0, instance:com.gtech.suite.BeforeAppEx@61542a75]" name="beforeSuite" is-config="true" duration-ms="356" started-at="2014-08-07T12:44:32Z" finished-at="2014-08-07T12:44:32Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[D:\backofficeextention\ibn\Atom]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.gtech.suite.BeforeAppEx@61542a75]" name="afterSuite" is-config="true" duration-ms="1" started-at="2014-08-07T12:44:43Z" finished-at="2014-08-07T12:44:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterSuite -->
+      </class> <!-- com.gtech.suite.BeforeAppEx -->
+      <class name="com.gtech.miscellaneous.testcases.WebBrowser">
+        <test-method status="PASS" signature="GAME_openBrowser(java.util.LinkedHashMap)[pri:0, instance:com.gtech.miscellaneous.testcases.WebBrowser@7c29e357]" name="GAME_openBrowser" duration-ms="9337" started-at="2014-08-07T12:44:32Z" data-provider="DataProvider" finished-at="2014-08-07T12:44:42Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GAME_openBrowser -->
+        <test-method status="PASS" signature="GAME_closeBrowser()[pri:0, instance:com.gtech.miscellaneous.testcases.WebBrowser@7c29e357]" name="GAME_closeBrowser" duration-ms="1166" depends-on-groups="signIn" started-at="2014-08-07T12:44:42Z" finished-at="2014-08-07T12:44:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- GAME_closeBrowser -->
+      </class> <!-- com.gtech.miscellaneous.testcases.WebBrowser -->
+    </test> <!-- SignIN -->
+  </suite> <!-- Suite -->
+</testng-results>
