@@ -31,7 +31,6 @@ public class WebBrowser_Implemenation {
 		return credentials.get(parentKey.trim());
 	}
 	
-	@SuppressWarnings("static-access")
 	public void GAME_openBrowser(
 			LinkedHashMap<String, LinkedHashMap<String, String>> credentials) {
 		

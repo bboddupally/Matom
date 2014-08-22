@@ -133,6 +133,8 @@ public class Asserting {
 	
 	public static void screenShot()
 			 {
+	if(DataSource.screenshot.equals("true")){
+		
 	
 		 StackTraceElement[] list =null;
 	String filename=null;
@@ -159,7 +161,7 @@ public class Asserting {
 		        
 		    	fileName=filename + "_"+formater.format(Calendar.getInstance().getTime())+".png";  
 		        
-		        		        File f2=  new File("ScreenShot/"+fileName);
+		        		        File f2=  new File("./src/test/resources/Screenshot/"+fileName);
 		           try {
    
 		        	   if(DataSource.map.get("suite-browser").contains("fireFox")){
@@ -186,6 +188,6 @@ public class Asserting {
 		   }
 	}
 	
-	
+			 }
 	
 }

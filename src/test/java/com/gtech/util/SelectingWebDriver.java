@@ -1,6 +1,9 @@
 package com.gtech.util;
 
 import java.io.File;
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -10,6 +13,7 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 //import org.openqa.selenium.safari.SafariDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class SelectingWebDriver {
 	static String selectbrowser=null;
@@ -18,7 +22,7 @@ public class SelectingWebDriver {
 //static Logger log =Util4Modules.log();
 public static WebDriver driver;
 //this is single ton single object i.e driver 
-public static  WebDriver getInstance(){
+public static  WebDriver getInstance() {
 	WebDriver driver2 = null;
 	if(driver==null){
 		selectbrowser=propFile("suite-browser");
@@ -44,9 +48,24 @@ public static  WebDriver getInstance(){
 //			driver2=  new SafariDriver();
 		}
 		else if(selectbrowser.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", DataSource.DataFolder+"/chromedriver.exe");
-			driver2 = new ChromeDriver();
-			driver2.manage().deleteAllCookies();
+			if(DataSource.localhost.equals("false")){
+				DesiredCapabilities capability = DesiredCapabilities.firefox();
+				try {
+					driver2=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+				} catch (MalformedURLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}	
+			}
+			
+			else if(DataSource.localhost.equals("true")){
+				System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver.exe");
+				driver2 = new ChromeDriver();
+				driver2.manage().deleteAllCookies();
+			}else{
+				System.out.println("please provide locahost as true or false");
+			}
+			
 			//driver.manage().
 		}
 		SelectingWebDriver.driver=driver2;
@@ -62,7 +81,7 @@ public static String propFile(String propertiesName){
 }
 
 
-public  WebDriver  startClient(){
+public  WebDriver  startClient() throws IOException {
 		return getInstance();
 		
 		

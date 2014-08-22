@@ -23,7 +23,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -37,7 +37,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>D:\backofficeextention\ibn\Matom\src\test\resources\testng.xml</span>
+                    <span>C:\Users\bboddupally\git\Matom\src\test\resources\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,21 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods,   3 passed</span>
+                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.gtech.administration.testcases.Login" hash-for-method="GAME_SignIn({parameters={title=English}, field={First name=bhupesh, Last name=sharma, Email=bupe@gmail.com, Mobi...)">GAME_SignIn({parameters={title=English}, field={First name=bhupesh, Last name=sharma, Email=bupe@gmail.com, Mobi...)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -101,17 +115,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.gtech.administration.testcases.Login" hash-for-method="GAME_SignIn({parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}, field={User ID*=admin, Passw...)">GAME_SignIn({parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}, field={User ID*=admin, Passw...)</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.gtech.miscellaneous.testcases.WebBrowser" hash-for-method="GAME_closeBrowser">GAME_closeBrowser</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.gtech.miscellaneous.testcases.WebBrowser" hash-for-method="GAME_openBrowser({parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}})">GAME_openBrowser({parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}})</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.gtech.miscellaneous.testcases.WebBrowser" hash-for-method="GAME_openBrowser({parameters={url=http://www-cat.chitchatbingo.com/content/ibn/en.html}})">GAME_openBrowser({parameters={url=http://www-cat.chitchatbingo.com/content/ibn/en.html}})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -126,6 +135,31 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.gtech.administration.testcases.Login</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="GAME_SignIn({parameters={title=English}, field={First name=bhupesh, Last name=sharma, Email=bupe@gmail.com, Mobi...)">
+                  </a> <!-- GAME_SignIn({parameters={title=English}, field={First name=bhupesh, Last name=sharma, Email=bupe@gmail.com, Mobi...) -->
+                  <span class="method-name">GAME_SignIn</span>
+                  <span class="parameters">({parameters={title=English}, field={First name=bhupesh, Last name=sharma, Email=bupe@gmail.com, Mobile=798789797877, Login name=bhupeshsh, Passwordt=Apere12345, Nickname=bupeshkkk, Home Phone=45453534534534, ADDRESS 1=dfgfgfdgfdg, ADDRESS 2=gdfgdfgfdg, Post Code=545345, Security answer=petshsh}, dropdown={Country=INDIA, Gender=Male, Security question=Where did you go to school?, How did you hear about us=Friend}, date={month=Jul, day=5, year=1984}, button={sign=Sign Up Here}, checkbox={18=*Confirm you are over 18 years, accept=I Accept the, keepmeUpdayed=Keep me updated with news}})</span>
+                  <div class="stack-trace">java.lang.NullPointerException
+	at com.gtech.util.Asserting.screenShot(Asserting.java:136)
+	at com.gtech.util.Asserting.verifyEquals(Asserting.java:105)
+	at com.gtech.util.Util4Modules.verifyingDpath(Util4Modules.java:1838)
+	at com.gtech.util.Util4Modules.verifyingLabelsAndTextTheFields(Util4Modules.java:1775)
+	at com.gtech.administration.implementation.Login_Implementation.GAME_SignIn(Login_Implementation.java:87)
+	at com.gtech.administration.testcases.Login.GAME_SignIn(Login.java:59)
+... Removed 24 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -141,26 +175,10 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="GAME_openBrowser({parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}})">
-                  </a> <!-- GAME_openBrowser({parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}}) -->
+                  <a name="GAME_openBrowser({parameters={url=http://www-cat.chitchatbingo.com/content/ibn/en.html}})">
+                  </a> <!-- GAME_openBrowser({parameters={url=http://www-cat.chitchatbingo.com/content/ibn/en.html}}) -->
                   <span class="method-name">GAME_openBrowser</span>
-                  <span class="parameters">({parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.gtech.administration.testcases.Login</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="GAME_SignIn({parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}, field={User ID*=admin, Passw...)">
-                  </a> <!-- GAME_SignIn({parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}, field={User ID*=admin, Passw...) -->
-                  <span class="method-name">GAME_SignIn</span>
-                  <span class="parameters">({parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}, field={User ID*=admin, Password*=ocimum}})</span>
+                  <span class="parameters">({parameters={url=http://www-cat.chitchatbingo.com/content/ibn/en.html}})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -168,14 +186,16 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">D:\backofficeextention\ibn\Matom\src\test\resources\testng.xml</span>
+            <span class="header-content">C:\Users\bboddupally\git\Matom\src\test\resources\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot;&gt;
-  &lt;parameter name=&quot;projectPath&quot; value=&quot;D:\backofficeextention\ibn\Atom&quot;/&gt;
+  &lt;parameter name=&quot;takescreenshot&quot; value=&quot;true&quot;/&gt;
+  &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;localhost&quot; value=&quot;true&quot;/&gt;
   &lt;test name=&quot;BeforeAppEx&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.gtech.suite.BeforeAppEx&quot;/&gt;
@@ -281,22 +301,22 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(3);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'GAME_openBrowser')
-data.setCell(0, 2, 'com.gtech.miscellaneous.testcases.WebBrowser')
-data.setCell(0, 3, 18474);
+data.setCell(0, 1, 'GAME_SignIn')
+data.setCell(0, 2, 'com.gtech.administration.testcases.Login')
+data.setCell(0, 3, 22753);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'GAME_closeBrowser')
+data.setCell(1, 1, 'GAME_openBrowser')
 data.setCell(1, 2, 'com.gtech.miscellaneous.testcases.WebBrowser')
-data.setCell(1, 3, 1170);
+data.setCell(1, 3, 8807);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'GAME_SignIn')
-data.setCell(2, 2, 'com.gtech.administration.testcases.Login')
-data.setCell(2, 3, 2);
+data.setCell(2, 1, 'GAME_closeBrowser')
+data.setCell(2, 2, 'com.gtech.miscellaneous.testcases.WebBrowser')
+data.setCell(2, 3, 1204);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 32 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -331,36 +351,38 @@ return data;
             <div class="chronological-class">
               <div class="chronological-class-name">com.gtech.suite.BeforeAppEx</div> <!-- chronological-class-name -->
               <div class="configuration-suite before">
-                <span class="method-name">beforeSuite(D:\backofficeextention\ibn\Atom)</span>
+                <span class="method-name">beforeSuite(true)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.gtech.miscellaneous.testcases.WebBrowser</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">GAME_openBrowser({parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}})</span>
-                <span class="method-start">394 ms</span>
+                <span class="method-name">GAME_openBrowser({parameters={url=http://www-cat.chitchatbingo.com/content/ibn/en.html}})</span>
+                <span class="method-start">421 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.gtech.administration.testcases.Login</div> <!-- chronological-class-name -->
               <div class="test-method">
-                <span class="method-name">GAME_SignIn({parameters={url=http://www-sit.chitchatbingo.com/content/ibn/en.html}, field={User ID*=admin, Passw...)</span>
-                <span class="method-start">18871 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">GAME_SignIn({parameters={title=English}, field={First name=bhupesh, Last name=sharma, Email=bupe@gmail.com, Mobi...)</span>
+                <span class="method-start">9230 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.gtech.miscellaneous.testcases.WebBrowser</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">GAME_closeBrowser</span>
-                <span class="method-start">18874 ms</span>
+                <span class="method-start">31986 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">com.gtech.suite.BeforeAppEx</div> <!-- chronological-class-name -->
               <div class="configuration-suite after">
                 <span class="method-name">afterSuite</span>
-                <span class="method-start">20057 ms</span>
+                <span class="method-start">33206 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

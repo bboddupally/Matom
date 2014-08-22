@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="10.507" tests="3" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="38.387" tests="3" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.6.0_34\jre\bin"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="D:\backofficeextention\ibn\Matom"/>
+    <property name="user.dir" value="C:\Users\bboddupally\git\Matom"/>
     <property name="java.runtime.version" value="1.6.0_34-b04"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.6.0_34\jre\lib\endorsed"/>
@@ -24,9 +24,9 @@
     <property name="java.vm.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="D:\backofficeextention\ibn\.metadata\.plugins\org.eclipse.m2e.core\launches\m2conf7279815337994619592.tmp"/>
+    <property name="classworlds.conf" value="D:\backofficeextention\ibn\.metadata\.plugins\org.eclipse.m2e.core\launches\m2conf3981612494613450986.tmp"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_34\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.6.0_34/bin/../jre/bin/server;C:/Program Files/Java/jdk1.6.0_34/bin/../jre/bin;C:/Program Files/Java/jdk1.6.0_34/bin/../jre/lib/amd64;C:\Program Files\Java\jdk1.6.0_34\bin;%MAVEN_HOME%\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\VisualSVN\bin;C:\Program Files (x86)\VisualSVN Server\bin;D:\Program Files\MySQL\MySQL Server 5.5\bin;D:\eclipse;;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk1.6.0_34\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jdk1.6.0_34/bin/../jre/bin/server;C:/Program Files/Java/jdk1.6.0_34/bin/../jre/bin;C:/Program Files/Java/jdk1.6.0_34/bin/../jre/lib/amd64;C:\Program Files\Java\jdk1.6.0_34\bin;%MAVEN_HOME%\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\VisualSVN\bin;C:\Program Files (x86)\VisualSVN Server\bin;D:\Program Files\MySQL\MySQL Server 5.5\bin;C:\Program Files (x86)\Sikuli X\libs;bin;C:\Program Files\Sikuli X\libs;bin;D:\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="50.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -41,7 +41,7 @@
     <property name="java.vm.specification.version" value="1.0"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.6.0_34\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -s C:\Users\bboddupally\.m2\settings.xml test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -B -s C:\Users\bboddupally\.m2\settings.xml install"/>
     <property name="java.specification.vendor" value="Sun Microsystems Inc."/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -50,7 +50,7 @@
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.6.0_34\jre\lib\ext;C:\Windows\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.6.0_34\jre\lib\resources.jar;C:\Program Files\Java\jdk1.6.0_34\jre\lib\rt.jar;C:\Program Files\Java\jdk1.6.0_34\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.6.0_34\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.6.0_34\jre\lib\jce.jar;C:\Program Files\Java\jdk1.6.0_34\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.6.0_34\jre\lib\modules\jdk.boot.jar;C:\Program Files\Java\jdk1.6.0_34\jre\classes"/>
     <property name="java.vendor" value="Sun Microsystems Inc."/>
-    <property name="maven.home" value="D:\backofficeextention\ibn\Matom\EMBEDDED"/>
+    <property name="maven.home" value="C:\Users\bboddupally\git\Matom\EMBEDDED"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://java.sun.com/cgi-bin/bugreport.cgi"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -58,7 +58,7 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="GAME_openBrowser" classname="com.gtech.miscellaneous.testcases.WebBrowser" time="9.338"/>
-  <testcase name="GAME_SignIn" classname="com.gtech.administration.testcases.Login" time="0.002"/>
-  <testcase name="GAME_closeBrowser" classname="com.gtech.miscellaneous.testcases.WebBrowser" time="1.167"/>
+  <testcase name="GAME_openBrowser" classname="com.gtech.miscellaneous.testcases.WebBrowser" time="8.849"/>
+  <testcase name="GAME_SignIn" classname="com.gtech.administration.testcases.Login" time="28.263"/>
+  <testcase name="GAME_closeBrowser" classname="com.gtech.miscellaneous.testcases.WebBrowser" time="1.275"/>
 </testsuite>

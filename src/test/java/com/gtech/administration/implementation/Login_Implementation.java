@@ -5,14 +5,16 @@ package com.gtech.administration.implementation;
 
 import java.util.LinkedHashMap;
 import java.util.Map.Entry;
-import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import com.gtech.util.DataSource;
 import com.gtech.util.SelectingWebDriver;
 import com.gtech.util.Util4Modules;
+
+
 
 /**
  * @author bhupesh.b
@@ -46,32 +48,20 @@ public class Login_Implementation  {
 	
 	public void GAME_SignIn(
 			LinkedHashMap<String, LinkedHashMap<String, String>> credentials) {
-		//autoutil.copyloginCredentials(credentials);
 		
+			autoutil.clickButton(dataSheet(credentials,"button","sign"),propFile("link"));
+		for(Entry<String, String> entry : dataSheet(credentials, "dropdown").entrySet())
+			autoutil.dropDown(entry.getKey(), entry.getValue());
+		for(Entry<String, String> entry : dataSheet(credentials, "date").entrySet())
+			autoutil.selectDate(entry.getKey(), entry.getValue());
 		for(Entry<String, String> entry : dataSheet(credentials, "field").entrySet())
-		System.out.println(entry.getKey()+ ","+ entry.getValue());
-			/*autoutil.verifyingLabelsAndTextTheFields(entry.getKey(), entry.getValue());
-		autoutil.clickLoginButton(propFile("login_submit"));
-		autoutil.acceptAlerts();
-		
-		try{
-			Alert alert =driver.switchTo().alert();
-			alert.accept();
-		}catch(Exception e){
-		}
-		autoutil.acceptAlert();
-		autoutil.waitUntillDisplayed();*/
+			autoutil.verifyingLabelsAndTextTheFields(entry.getKey(), entry.getValue());
+		for(Entry<String, String> entry : dataSheet(credentials, "checkbox").entrySet())
+			autoutil.selectcheckBox(entry.getValue());
+
 	}
 	
 	
 	
-
-
-	
-
-	
-
-
-
 
 }

@@ -8,12 +8,12 @@ import com.gtech.util.DataSource;
 @Test(groups = {})
 public class BeforeAppEx {
 	DataSource dd = null;
-	@Parameters(value = {"projectPath"})
+	@Parameters(value = {"localhost,takescreenshot"})
 	@BeforeSuite
-	public  void beforeSuite(String projectPath) throws Exception{
+	public  void beforeSuite(String localhost, String screenShot) throws Exception{
 		//Reporter.setEscapeHtml(false);
 		
-		dd = new DataSource(projectPath);
+		dd = new DataSource(localhost,screenShot);
 		dd.loadProperties();
 		DataSource.buffer();
 		//dd.createXmlFile();
@@ -22,6 +22,24 @@ public class BeforeAppEx {
 			//ExecLinuxScripts.excLinuxScriptsToCleanDB();
 		}*/
 	}
+	
+	
+	
+	@Parameters(value = {"localhost"})
+	@BeforeSuite
+	public  void beforeSuite(String localhost) throws Exception{
+		//Reporter.setEscapeHtml(false);
+		
+		dd = new DataSource(localhost);
+		dd.loadProperties();
+		DataSource.buffer();
+		//dd.createXmlFile();
+		/*DataSource.map.get("cleandb");
+		if(DataSource.map.get("cleandb").contains("true")){
+			//ExecLinuxScripts.excLinuxScriptsToCleanDB();
+		}*/
+	}
+	
 	//please enable beforTest4Suite,beforeSuite4Class and afterTest4Suite  
 	@AfterSuite(groups = { "smokeTest" })
 	public void afterSuite(){

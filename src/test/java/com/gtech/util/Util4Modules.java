@@ -1,7 +1,5 @@
 package com.gtech.util;
 
-import java.io.File;
-import java.io.IOException;
 import java.math.BigInteger;
 import java.security.SecureRandom;
 import java.util.ArrayList;
@@ -71,12 +69,12 @@ public class Util4Modules {
 	public void copyloginCredentials(LinkedHashMap<String, LinkedHashMap<String, String>> credentials){
 		loginCredentials=credentials;
 	}
-	public String fileAbsolutePath(String filename){
+	/*public String fileAbsolutePath(String filename){
 		File file = null;
 
-		file=new File(DataSource.DataFolder+"/Data/"+filename);
+		file=new File(DataSource.localhost+"/Data/"+filename);
 		return file.getAbsolutePath();
-	}
+	}*/
 
 	//Accept Alert popUp
 	public void acceptAlert(){
@@ -273,11 +271,31 @@ public class Util4Modules {
 	}
 	
 	public void clickButton(String button,String path){
-		try {
+
 			sleep();
+			
+			
+			List<WebElement> l1=driver.findElements(By.xpath((path).replace("CONSTANT",button)));
+			if(l1.size()!=0){
+				for(WebElement el:l1){
+					if(el.isDisplayed())
+					{
+						el.click();
+					}
+				}
+			}else{
+				Asserting.assertEquals(null, button);
+			}
+			
+			
+			
+			
+			
+		/*	
 			if(driver.findElement(By.xpath((path).replace("CONSTANT",button))).isDisplayed()){
 				driver.findElement(By.xpath((path).replace("CONSTANT",button))).click();
 				
+				System.out.println(path);
 				try{
 					Alert alert =driver.switchTo().alert();
 					alert.accept();
@@ -286,14 +304,13 @@ public class Util4Modules {
 				
 				
 			}else{
-				Asserting.assertEquals(null, button);
+				System.out.println(path);
+
+				
 				System.out.println("unable to find the location of :"+ button);
-			}
-			popUpClickOK();
-			clickOnAlert();
-		} catch (Exception e) {
-			Asserting.assertEquals(null, button);
-		}
+			}*/
+			
+		
 	}
 	/**
 	 * 
@@ -791,8 +808,8 @@ Asserting.assertEquals(null, element);
 	public void isTitleExist(String expectedresult){
 		driver.manage().timeouts().implicitlyWait(120, TimeUnit.SECONDS);
 		if(isExists("//title")){
-			System.out.println(driver.findElement(By.xpath("//title")).getText());
-			Asserting.assertEquals(driver.findElement(By.xpath("//title")).getText().trim(),propFile(expectedresult));
+			System.out.println(driver.findElement(By.xpath("/html/head/title")).getText());
+			Asserting.assertEquals(driver.findElement(By.xpath("*//title")).getText().trim(),expectedresult);
 		}else{
 			Asserting.assertEquals("null",propFile(expectedresult));
 
@@ -1536,6 +1553,38 @@ public void test(){
 		}
 	}
 
+	
+	//game apis 
+	public void selectDate(String name, String selected){
+		
+		if(driver.findElements(By.name(name)).size()!=0){
+		    new Select(driver.findElement(By.name(name))).selectByVisibleText(selected);
+		}else{
+			Asserting.verifyEquals(null, name);
+		}
+			
+	}
+	
+	public void dropDown(String label, String LabelValue){
+		if(isExists(propFile("dropDownLabel").replace("CONSTANT", label))){
+		    new Select(driver.findElement(By.xpath(propFile("dropDownLabel").replace("CONSTANT", label)))).selectByVisibleText(LabelValue);
+
+		}else{
+			Asserting.verifyEquals(null,label);
+
+		}
+		//Gender
+
+	}
+	
+	
+	public void selectcheckBox(String label){
+		driver.findElement(By.xpath(propFile("label").replace("CONSTANT",label))).click();
+	}
+	
+	
+	
+	
 	public void verifyDropdownText(String label,String labelValue){
 		Asserting.verifyEquals( new Select(driver.findElement(By.xpath(propFile("labelvalue").replace("CONSTANT", label)))).getFirstSelectedOption().getText().trim(), labelValue);
 					}

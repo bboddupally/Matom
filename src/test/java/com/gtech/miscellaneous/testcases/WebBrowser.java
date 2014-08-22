@@ -10,7 +10,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.gtech.administration.implementation.Login_Implementation;
 import com.gtech.miscellaneous.implementation.WebBrowser_Implemenation;
 import com.gtech.util.DataSource;
 
@@ -21,10 +20,7 @@ import com.gtech.util.DataSource;
 
 public class WebBrowser {
 	
-	
-	
-	
-	
+		
 	WebBrowser_Implemenation  browser_Implemenation = null;
 	DataSource dd = new DataSource();
 
@@ -52,11 +48,6 @@ public class WebBrowser {
 	
 	
 	//static Logger log =Util4Modules.log();
-	
-	
-	
-							
-	
 	
 
 	@Test(dataProvider="DataProvider",groups={"openBrowser"})

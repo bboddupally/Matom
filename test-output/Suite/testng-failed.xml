@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <parameter name="projectPath" value="D:\backofficeextention\ibn\Atom"/>
+  <parameter name="takescreenshot" value="true"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="localhost" value="true"/>
   <test name="SignIN(failed)">
     <groups>
       <run>
@@ -11,20 +13,20 @@
       </run>
     </groups>
     <classes>
-      <class name="com.gtech.miscellaneous.testcases.WebBrowser">
-        <methods>
-          <include name="GAME_openBrowser"/>
-          <include name="GAME_closeBrowser"/>
-        </methods>
-      </class> <!-- com.gtech.miscellaneous.testcases.WebBrowser -->
       <class name="com.gtech.suite.BeforeAppEx">
         <methods>
           <include name="beforeSuite"/>
+          <include name="afterSuite"/>
         </methods>
       </class> <!-- com.gtech.suite.BeforeAppEx -->
+      <class name="com.gtech.miscellaneous.testcases.WebBrowser">
+        <methods>
+          <include name="GAME_openBrowser"/>
+        </methods>
+      </class> <!-- com.gtech.miscellaneous.testcases.WebBrowser -->
       <class name="com.gtech.administration.testcases.Login">
         <methods>
-          <include name="GAME_SignIn"/>
+          <include name="GAME_SignIn" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.gtech.administration.testcases.Login -->
     </classes>

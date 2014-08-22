@@ -2,11 +2,8 @@ package com.gtech.util;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.io.StringReader;
-import java.io.UnsupportedEncodingException;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
@@ -15,24 +12,30 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map.Entry;
 import java.util.Properties;
-
-import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
+import com.gtech.util.Helper;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 
-import com.gtech.util.ExcelUtil;
-import com.gtech.util.Helper;
-
 public class DataSource {
-	public  static String DataFolder=null;
-	
+	public  static String localhost=null;
+	public static String screenshot=null;
+
 public DataSource(){
+	
 		
 	}
 	
+	
+	
+	
+	public DataSource(String args, String args2){
+		DataSource.localhost=args;
+		DataSource.screenshot=args2;
+	}
+	
 	public DataSource(String args){
-		DataSource.DataFolder=args;
+		DataSource.localhost=args;
 	}
 	
 	public static LinkedHashMap<String,String> map = new LinkedHashMap<String, String>();
@@ -156,7 +159,7 @@ public static LinkedHashMap<String,LinkedHashMap<String,LinkedHashMap<String,Lin
 	
 	public  void loadProperties(){
 		Properties prop = new Properties();
-		//DataFolder=projectPath;
+		//localhost=projectPath;
 		try {
 			prop.load(new StringReader(readFile("src/test/resources/Games-APP-Util.properties").replace(" ", "~"))); } catch (Exception e) {e.printStackTrace();}
 		for(Object str: prop.keySet()) {
