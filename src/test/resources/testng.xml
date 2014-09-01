@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Suite" verbose="1" preserve-order="true">
 <parameter name="takescreenshot" value="true"/>
-<parameter name="localhost" value="true"/> 
+<parameter name="localhost" value="false"/> 
 <parameter name="browser" value="chrome"/> 
 
 	<test name="BeforeAppEx" preserve-order="true">
