@@ -19,7 +19,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class DataSource {
 	public  static String localhost=null;
-	public static String screenshot=null;
+	public static String browser=null;
 
 public DataSource(){
 	
@@ -31,7 +31,7 @@ public DataSource(){
 	
 	public DataSource(String args, String args2){
 		DataSource.localhost=args;
-		DataSource.screenshot=args2;
+		DataSource.browser=args2;
 	}
 	
 	public DataSource(String args){

@@ -8,12 +8,12 @@ import com.gtech.util.DataSource;
 @Test(groups = {})
 public class BeforeAppEx {
 	DataSource dd = null;
-	@Parameters(value = {"localhost,takescreenshot"})
+	@Parameters(value = {"localhost","browser"})
 	@BeforeSuite
-	public  void beforeSuite(String localhost, String screenShot) throws Exception{
+	public  void beforeSuite(String localhost, String browser) throws Exception{
 		//Reporter.setEscapeHtml(false);
 		
-		dd = new DataSource(localhost,screenShot);
+		dd = new DataSource(localhost,browser);
 		dd.loadProperties();
 		DataSource.buffer();
 		//dd.createXmlFile();
