@@ -133,7 +133,7 @@ public class Asserting {
 	
 	public static void screenShot()
 			 {
-	if(DataSource.screenshot.equals("true")){
+	//if(DataSource.screenshot.equals("true")){
 		
 	
 		 StackTraceElement[] list =null;
@@ -188,6 +188,6 @@ public class Asserting {
 		   }
 	}
 	
-			 }
+			 
 	
 }
