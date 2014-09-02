@@ -53,9 +53,9 @@ public class SelectingWebDriver {
 			}
 			else if(selectbrowser.equals("chrome")){
 				if(DataSource.localhost.equals("false")){
-					DesiredCapabilities capability = DesiredCapabilities.firefox();
 					try {
-						driver2=new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
+							driver2= new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), DesiredCapabilities.chrome());
+						
 					} catch (MalformedURLException e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();

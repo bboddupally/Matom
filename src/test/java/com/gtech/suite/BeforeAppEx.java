@@ -25,7 +25,7 @@ public class BeforeAppEx {
 	
 	
 	
-	@Parameters(value = {"localhost"})
+/*	@Parameters(value = {"localhost"})
 	@BeforeSuite
 	public  void beforeSuite(String localhost) throws Exception{
 		//Reporter.setEscapeHtml(false);
@@ -34,11 +34,11 @@ public class BeforeAppEx {
 		dd.loadProperties();
 		DataSource.buffer();
 		//dd.createXmlFile();
-		/*DataSource.map.get("cleandb");
+		DataSource.map.get("cleandb");
 		if(DataSource.map.get("cleandb").contains("true")){
 			//ExecLinuxScripts.excLinuxScriptsToCleanDB();
-		}*/
-	}
+		}
+	}*/
 	
 	//please enable beforTest4Suite,beforeSuite4Class and afterTest4Suite  
 	@AfterSuite(groups = { "smokeTest" })
